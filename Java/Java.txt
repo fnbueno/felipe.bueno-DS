@@ -1,0 +1,325 @@
+					JAVA
+1. O que existe
+2. Como usar
+3. Regras, limites e dicas
+==================================================
+			LISTA DE COMANDOS E CONCEITOS (COM DEFINIÇÃO)
+BÁSICO
+
+Variáveis
+Espaços na memória usados para armazenar valores que podem ser utilizados no programa.
+
+Tipos de dados
+Definem que tipo de valor uma variável pode armazenar (número, texto, etc.).
+
+Entrada de dados (Scanner)
+Permite receber dados digitados pelo usuário.
+
+Saída de dados (System.out)
+Permite exibir informações no console.
+
+				TIPOS DE DADOS
+
+int
+Armazena números inteiros.
+
+double
+Armazena números decimais com maior precisão.
+
+float
+Armazena números decimais com menor precisão (menos usado).
+
+String
+Armazena textos (sequência de caracteres).
+
+char
+Armazena um único caractere.
+
+boolean
+Armazena valores lógicos: true ou false.
+
+OPERADORES
+
+Aritméticos (+ - * / %)
+Realizam operações matemáticas.
+
+Comparação (== != > < >= <=)
+Comparam valores e retornam verdadeiro ou falso.
+
+Lógicos (&& || !)
+Combinam expressões booleanas.
+
+&& (AND)
+Retorna verdadeiro se ambas as condições forem verdadeiras.
+
+|| (OR)
+Retorna verdadeiro se pelo menos uma condição for verdadeira.
+
+! (NOT)
+Inverte o valor lógico.
+
+CONTROLE DE FLUXO
+
+if
+Executa um bloco de código se a condição for verdadeira.
+
+else if
+Permite testar múltiplas condições.
+
+else
+Executa quando nenhuma condição anterior for verdadeira.
+
+switch
+Estrutura usada para múltiplas escolhas com base em uma variável.
+
+case
+Define uma opção dentro do switch.
+
+default
+Executa caso nenhuma das opções seja atendida.
+
+break
+Interrompe a execução de um bloco (usado em switch e loops).
+
+				LAÇOS DE REPETIÇÃO
+
+for
+Usado quando se sabe quantas vezes o loop será executado.
+
+while
+Executa enquanto a condição for verdadeira.
+
+do-while
+Executa pelo menos uma vez antes de verificar a condição.
+
+continue
+Pula a execução atual e vai para a próxima repetição do loop.
+
+ENTRADA DE DADOS
+
+import java.util.Scanner
+Importa a classe Scanner para permitir entrada de dados.
+
+Scanner scanner = new Scanner(System.in)
+Cria um objeto para capturar dados do teclado.
+
+scanner.nextInt()
+Lê um número inteiro digitado pelo usuário.
+
+scanner.nextDouble()
+Lê um número decimal.
+
+scanner.nextLine()
+Lê uma linha inteira de texto.
+
+scanner.next()
+Lê apenas uma palavra (até o espaço).
+
+SAÍDA DE DADOS
+
+System.out.print()
+Exibe texto sem pular linha.
+
+System.out.println()
+Exibe texto e pula para a próxima linha.
+
+System.out.printf()
+Exibe texto formatado (semelhante ao printf de outras linguagens).
+
+			ARRAYS
+
+int[] array
+Estrutura que armazena vários valores do mesmo tipo em uma única variável.
+
+MÉTODOS (FUNÇÕES)
+
+public static
+Define um método acessível sem precisar instanciar a classe.
+
+tipo (int, void, etc.)
+Define o tipo de valor que o método retorna.
+
+nome()
+Nome do método.
+
+return
+Retorna um valor e encerra o método.
+
+void
+Indica que o método não retorna valor.
+
+POO (PROGRAMAÇÃO ORIENTADA A OBJETOS)
+
+class
+Define um modelo (estrutura) para criar objetos.
+
+atributos
+Variáveis dentro da classe que representam características.
+
+métodos
+Funções dentro da classe que definem comportamentos.
+
+construtor
+Método especial chamado ao criar um objeto.
+
+this
+Referência ao próprio objeto.
+
+public
+Permite acesso de qualquer lugar.
+
+private
+Restringe o acesso apenas à própria classe.
+
+TRATAMENTO DE ERROS
+
+try
+Bloco onde o código pode gerar erro.
+
+catch
+Captura e trata o erro.
+
+finally
+Executa sempre, independente de erro.
+
+Exception
+Classe base para erros.
+
+==================================================
+		ANOTAÇÕES IMPORTANTES (REGRAS E LIMITES)
+
+Java é fortemente tipado (precisa declarar tipo)
+
+String é uma classe, não tipo primitivo
+
+Scanner pode causar problemas com nextLine()
+
+== funciona para tipos primitivos, mas para objetos usar .equals()
+
+break encerra loops ou switch
+
+continue pula para próxima iteração
+
+Métodos precisam de tipo de retorno (ou void)
+
+==================================================
+			OBSERVAÇÕES E BOAS PRÁTICAS
+
+Prefira métodos ao invés de repetir código
+
+Use nomes claros para variáveis
+
+Separe lógica de exibição
+
+Feche o Scanner após uso
+
+POO
+
+Atributos → o objeto tem
+Métodos → o objeto faz
+
+Use encapsulamento (private + métodos de acesso)
+
+				EXEMPLOS DE CADA COMANDO
+VARIÁVEIS E TIPOS
+int idade = 18;
+
+double altura = 1.75;
+
+String nome = "João";
+
+boolean ativo = true;
+
+char letra = 'A';
+
+				ENTRADA DE DADOS
+
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+
+System.out.print("Digite sua idade: ");
+int idade = scanner.nextInt();
+
+scanner.nextLine(); // limpar buffer
+
+System.out.print("Digite seu nome: ");
+String nome = scanner.nextLine();
+
+				SAÍDA DE DADOS
+System.out.println("Olá");
+System.out.print("Sem quebra de linha");
+System.out.printf("Nome: %s Idade: %d", nome, idade);
+
+				OPERADORES
+int soma = 10 + 5;
+int resto = 10 % 3;
+
+boolean maior = 10 > 5;
+boolean resultado = true && false;
+CONDICIONAL
+if (idade >= 18) {
+    System.out.println("Maior de idade");
+} else if (idade >= 16) {
+    System.out.println("Pode votar");
+} else {
+    System.out.println("Menor");
+}
+SWITCH (CORRIGIDO)
+int opcao = 10;
+
+switch (opcao) {
+    case 10:
+        System.out.println("O número é 10");
+        break;
+    case 11:
+        System.out.println("O número é 11");
+        break;
+    default:
+        System.out.println("Outro valor");
+}
+FOR
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+WHILE
+int contador = 0;
+
+while (contador < 5) {
+    contador++;
+}
+DO-WHILE
+int i = 0;
+
+do {
+    System.out.println(i);
+    i++;
+} while (i < 5);
+ARRAY
+int[] numeros = {1, 2, 3};
+
+System.out.println(numeros[0]);
+MÉTODOS
+public static int soma(int a, int b) {
+    return a + b;
+}
+CLASSE (POO)
+class Pessoa {
+    String nome;
+    int idade;
+
+    Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    void apresentar() {
+        System.out.println("Nome: " + nome);
+    }
+}
+TRY / CATCH
+try {
+    int n = Integer.parseInt("abc");
+} catch (Exception e) {
+    System.out.println("Erro");
+}
